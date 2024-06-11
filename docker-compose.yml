@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #django인지 fastapi인지는 여기만 바뀌면 됨  
+    command: "uvicorn app.main:app --reload"
+    ports:
+      - "80:80"
