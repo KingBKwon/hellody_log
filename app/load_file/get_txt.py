@@ -7,7 +7,7 @@ S3_SECRET_KEY = os.getenv("AWS_S3_SECRET_KEY")
 s3 = boto3.client("s3", aws_access_key_id=S3_ACCESS_KEY, aws_secret_access_key=S3_SECRET_KEY)
 
 bucket = 'spotifymodel'
-s3_dir = 'watch-data/watchdata.txt'
+s3_dir = 'watch-data/watchdata.csv'
 
 
 async def upload_s3(input_data:str):
