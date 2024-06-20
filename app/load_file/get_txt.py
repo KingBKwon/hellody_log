@@ -17,6 +17,6 @@ async def upload_s3(input_data:str):
         new_data = data + input_data
         s3.put_object(Bucket=bucket, Key=s3_dir, Body=new_data.encode())
         return True    
-    except:
-        return False
+    except Exception as e:
+        return e
     
